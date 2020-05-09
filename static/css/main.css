@@ -1,0 +1,48 @@
+.lblue{
+    background-color: rgba(164, 229, 255, 0.2);
+}
+.lgrey{
+    background-color: lightgray;
+}
+.head{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    color:rgb(10,10,10);
+    font-size-adjust: initial;
+}
+.center{
+    text-align: center;
+}
+.large-txt{
+    font-size: larger;
+    text-align: left;
+    color: black;
+    font-family: helv;
+}
+#grad1 {
+  height: 55px;
+  background-color: red;
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+#grad2 {
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,255,1));
+}
+#grad3 {
+  background-image: linear-gradient(to left, rgba(0,255,0,0), rgba(255,0,0,1));
+}
+.htext{
+    border: 45px;
+    margin: 5px;
+    color: blueviolet;
+    text-align: center;
+    text-wrap: none;
+}
+.divbox{
+    border: 5px;
+    margin: 10px;
+    color: darkgrey;
+    text-align: center;
+    text-wrap: none;
+    background-color: lightgray;
+}
+

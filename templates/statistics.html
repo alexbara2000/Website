@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <title>Statistics</title>
+    <style>
+        body{
+            background-color: rgba(190, 190, 190, 0.2);
+        }
+    </style>
+{% endblock %}
+
+{% block title %}Statistics{% endblock %}
+
+{% block introduction %}
+    <br/>
+    <div style="text-align: center">
+        <P style="size: 20px">
+            <em>Welcome to the statistics of the webiste, You can see all the user signed up and all of the activity on the website</em>
+        </P>
+    </div>
+    <br/><br/><br/>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+    <h5> User and passwords</h5>
+        <ol>
+            {% for users in passwords %}
+                <li>
+                    <ul>
+                    <li>{{ users.username }}</li>
+                    <li>{{ users.password }}</li>
+                    </ul>
+                </li>
+             {% endfor %}
+        </ol>
+
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+  <div class="container" >
+     <div class="table-responsive" style="text-align: center">
+         <table class="table" border="3" style="text-align: center">
+             <caption style="text-align: center"><h4>History</h4></caption>
+             <tr style="text-align: center">
+                 <th style="text-align: center">Time</th>
+                 <th style="text-align: center">User</th>
+                 <th style="text-align: center">Location</th>
+             </tr>
+             {% for item in items|reverse %}
+             <tr>
+                 <td>{{ item.date }}</td>
+                 <td>{{ item.name }}</td>
+                 <td>{{ item.place }}</td>
+             </tr>
+             {% endfor %}
+         </table>
+     </div>
+  </div>
+
+
+
+{% endblock %}

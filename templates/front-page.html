@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <title>Front Page</title>
+    <style>
+        body {
+            background-color: rgba(164, 229, 4, 0.2);
+        }
+    </style>
+{% endblock %}
+
+{% block title %}Welcome to Alexandru's Website{% endblock %}
+
+{% block introduction %}
+    <div class="container center">
+        <p class="large-txt">
+            <em>
+                Hello and Welcome to my website. Before you can access any of the information about me, you have to either
+                sign in or sign up using one of the two buttons below. If you forgot your password, please click on the button
+                saying forgot password.
+            </em>
+        </p>
+        <br/><br/><br/>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div style="text-align: left"><a href="login" class="btn btn-info" role="button">Login</a></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div style="text-align: center"><a href="signup" class="btn btn-info" role="button">Sign up</a></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div style="text-align: right"><a href="forgotPassword" class="btn btn-info" role="button">Forgot password</a></div>
+            </div>
+        </div>
+
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+{% endblock %}

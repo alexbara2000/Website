@@ -1,0 +1,25 @@
+{% extends 'base-menu.html' %}
+
+{% block form %}
+<div class="container">
+        <form class="form-horizontal" action="">
+            <div class="form-group">
+                {% block question1 %}{% endblock %}
+            </div>
+            <div class="form-group">
+                {% block question2 %}{% endblock %}
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="question 2">How did you feel About this page?</label>
+                <div class="col-sm-9 form-group">
+                    <textarea class=id="question2" rows="10" cols="60"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

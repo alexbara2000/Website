@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <title>Childhood</title>
+    <style>
+        body {
+            background-color: rgba(100, 80, 255, 0.2);
+        }
+    </style>
+{% endblock %}
+
+{% block title %}Childhood{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <p class="large-txt"><br/><br/>I moved to Canada at the age of 5. I did not know the language and I had no
+                    friends. It was a difficult time for me
+                    and it was hard to integrate with other people. When I was at school, I could not wait for the day
+                    to be done so I could
+                    go home and talk in a language I actually understood. Slowly but surely I started to undestand and
+                    learn french. I went to
+                    a french school, Katimavik Hebert which is where I started to grow a passion for math since it was
+                    one of the only
+                    classes I actually understood what was going on.</p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <h3>Katimavik Hebert, my primary school</h3>
+                <a href="https://katimavik.ecolesaintlaurent.ca/"><img class="img-responsive"
+                                                                       src="static/images/Katimavik-hebert.jpg"
+                                                                       alt="My primary school"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <h3>College Sainte-Anne, my high school</h3>
+                <a href="sainteanne.ca/"><img class="img-responsive"
+                                              src="static/images/Sainte-anne.jpg"
+                                              alt="My secondary school"></a>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <p class="large-txt"><br/><br/>In high school, I was comfortable with the language french. I would speak to
+                    everyone in french. All my
+                    friends would also speak french. But in secondary 4, everything changed. All my class was speaking
+                    english. So slowly I started to
+                    adapt and speak english to them. I discovered the beauty and simplicity of english and from them I
+                    never stopped loving english.
+                    It became my go to language in every day conversation pretty quickly. I also joined a science club
+                    at Sainte Anne. It was in the
+                    science club that I discovered programming. It felt like an universal language with unlimited
+                    possibilities. So I started to learn
+                    different languages and became fascinated by the logic and math behind it.</p>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/><br/>
+
+{% endblock %}
+
+{% block table %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <br/>
+                <br/>
+                <p class="large-txt">During my childhood, I was very interested with school. As you can see, these were
+                    my grades during my years at my primary school and at my high school. I was very string in the
+                    domains of mathematics and science but when it came to studying for french or english, I was always
+                    below average. The way things work
+                    has always fascinated me and has been one of my biggest interest. I used to get science kits as a
+                    kids and
+                    would work on building all sorts of items ranging from motorized cars to electric airplanes. I would
+                    always watch youtube videos that would
+                    either explain interesting mathematical concepts or science video explaining how things to build
+                    stuff at home.
+                    This fascination for discovering the beauty of nature has never stopped and I always like to pursue
+                    knowledge about the beautiful planet we live on. </p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="table-responsive">
+                    <table class="table" border="3">
+                        <caption><b>My Grades</b></caption>
+                        <tr class="active">
+                            <td></td>
+                            <th>Katimavik Hebert</th>
+                            <th>College Sainte-Anne</th>
+                        </tr>
+                        <tr>
+                            <th class="active">Grade 1</th>
+                            <td class="warning">78</td>
+                            <td class="success">82</td>
+                        </tr>
+                        <tr>
+                            <th class="active">Grade 2</th>
+                            <td class="danger">66</td>
+                            <td class="success">84</td>
+                        </tr>
+                        <tr>
+                            <th class="active">Grade 3</th>
+                            <td class="success">81</td>
+                            <td class="warning">79</td>
+                        </tr>
+                        <tr>
+                            <th class="active">Grade 4</th>
+                            <td class="success">82</td>
+                            <td class="success">85</td>
+                        </tr>
+                        <tr>
+                            <th class="active">Grade 5</th>
+                            <td class="warning">80</td>
+                            <td class="success">89</td>
+                        </tr>
+                        <tr>
+                            <th class="active">Grade 6</th>
+                            <td class="success">81</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block question1 %}
+    <label class="control-label col-sm-3" for="question 1">Where did I go to High school?</label>
+    <div class="col-sm-9">
+        <input type="radio" name="question 1" value="Saint-Louis">
+        <label for="Saint-Louis">Saint-Louis</label><br>
+        <input type="radio" name="question 1" value="WIC">
+        <label for="WIC">WIC</label><br>
+        <input type="radio" name="question 1" value="Sainte-Anne">
+        <label for="Sainte-Anne">Sainte-Anne</label><br>
+    </div>
+
+{% endblock %}

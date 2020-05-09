@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <title>Quiz</title>
+    <style>
+        body{
+            background-color: rgba(30, 69, 43, 0.2);
+        }
+    </style>
+    <script language="javascript">
+
+    function hint1(){
+        window.alert("My name is Alexandru, that does not sound American.")
+    }
+    function hint2(){
+        window.alert("Answer is in the Ealychildhood section.")
+    }
+    function hint3(){
+        window.alert("My school had fights with Sainte-Louis ")
+    }
+    function hint4(){
+        window.alert(".....Do you really need a hint")
+    }
+    function hint5(){
+        window.alert("My hobbies help me develop as a person and are not just for fun")
+    }
+
+
+
+    function get_total() {
+        var total=0;
+        var answers = document.quiz.elements;
+        for(var x=0;x<=19;x++){
+            if (answers[x].checked) {
+                if (answers[x].value=="Roumania"||answers[x].value=="Valentin"||answers[x].value=="CSA"||
+                    answers[x].value=="Concordia"||answers[x].value=="Books"||answers[x].value=="Chess") {
+                    total++;
+                }
+                if (answers[x].value=="Playing"||answers[x].value=="Workout"){
+                    total--;
+                }
+            }
+
+        }
+        if (total<0){
+            total=0;
+        }
+        window.alert("you got "+total+" out of 6");
+        var paraNode = document.createElement("p");
+        var textNode = document.createTextNode("total is "+total);
+        paraNode.appendChild(textNode);
+        var result = document.getElementById("display");
+		result.appendChild(paraNode);
+    }
+    </script>
+{% endblock %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block introduction %}
+    <br/>
+    <div style="text-align: center">
+        <P style="size: 20px">
+            <em>Now it is time to test your knowledge and see if you retained any information about me!</em>
+        </P>
+    </div>
+    <br/><br/><br/>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <div class="row">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <form name="quiz">
+        <h4> Where was I born?<br/></h4>
+        <input type="radio" name="question1" value="Canada" /> Canada<br />
+		<input type="radio" name="question1" value="Roumania" /> Roumania<br />
+		<input type="radio" name="question1" value="USA" /> USA<br />
+		<input type="radio" name="question1" value="France" /> France<br />
+        <br>
+        <h4> What is my dad's name?<br/></h4>
+        <input type="radio" name="question2" value="Adrian" /> Adrian<br />
+        <input type="radio" name="question2" value="Sorin" /> Sorin<br />
+		<input type="radio" name="question2" value="Valentin" /> Valentin<br />
+		<input type="radio" name="question2" value="John" /> John<br />
+        <br>
+        <h4> What high school did I attend?<br/></h4>
+        <input type="radio" name="question3" value="Sainte-Louis" /> Sainte-Louis<br />
+		<input type="radio" name="question3" value="CSA" /> CSA<br />
+		<input type="radio" name="question3" value="WIC" /> WIC<br />
+		<input type="radio" name="question3" value="school" /> School?<br />
+        <br>
+        <h4> What University am I going to?<br/></h4>
+        <input type="radio" name="question4" value="Concordia" /> Concordia<br />
+		<input type="radio" name="question4" value="Mcgill" /> McGill<br />
+		<input type="radio" name="question4" value="UDM" /> UDM<br />
+		<input type="radio" name="question4" value="UQAM" /> UQAM<br />
+        <br>
+        <h4> What are my hobbies?<br/></h4>
+        <input type="checkbox" name="question5" value="Books" /> Reading books<br />
+		<input type="checkbox" name="question5" value="Playing" /> Playing video games<br />
+		<input type="checkbox" name="question5" value="Chess" /> Chess<br />
+		<input type="checkbox" name="question5" value="Workout" /> Workout<br />
+        <br><br/>
+        <input type = "button" class="btn btn-info" name = "submit" value="Submit" onclick="get_total()">
+        </form>
+    </div>
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right;">
+        <h3 onmousedown="hint1()">Hint 1</h3><br/><br/><br/><br/><br/>
+        <h3 onmousedown="hint2()">Hint 2</h3><br/><br/><br/><br/><br/>
+        <h3 onmousedown="hint3()">Hint 3</h3><br/><br/><br/><br/><br/>
+        <h3 onmousedown="hint4()">Hint 4</h3><br/><br/><br/><br/><br/>
+        <h3 onmousedown="hint5()">Hint 5</h3>
+    </div>
+    </div>
+    </div>
+{% endblock %}

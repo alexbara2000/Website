@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <title>EarlyChildhood</title>
+    <style>
+        body{
+            background-color: rgba(164, 229, 255, 0.2);
+        }
+    </style>
+{% endblock %}
+
+{% block title %}Early Childhood{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <h3>Birth</h3>
+                <p class="large-txt">
+                    I was born February 9 in the year 2000. I was born in Romania Brasov where I ended up growing for the
+                    next 4 years of my life. I learned to speak Romanian and took my first steps in Romania. To this day
+                    I am grateful to be romanian since it thought me about the difficulties of life and how privileged we
+                    are to live in such a rich and beautiful country like Canada.
+                </p>
+                <img class="img-responsive" src="static/images/brasov.jpg" alt="Picture of Brasov">
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <h3>Family</h3>
+
+              <p class="large-txt">
+                  In Romania is where my whole Family is located. To start off, I have my father Valentin Bara and my
+                  mother Adriana Bara. My parents raised me and I owe everything to them. The next part of my family is my
+                  brother Andrei Bara. We always fight but deep down we care for each other. I also have three cousins
+                  who I wish to see more often but cannot due to distance issues. I only have one grandmother left and 2
+                  aunts. So my close family is relatively small.
+              </p>
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <h3>School</h3>
+              <p class="large-txt">
+                  During my time in Romania, I had time to go to only 2 years of pre school. Although I do not remember
+                  much of this time, my parents told me that I used to get along very well with the other kids and this
+                  has to do with my open personality. I used to be motivated and interested by touching and learning about
+                  evreything around me even at that young age.
+              </p>
+              <img class="img-responsive" src="static/images/pre-school.jpg" alt="Picture of school">
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <h3>Canada</h3>
+              <img class="img-responsive" src="static/images/canada.jpg" alt="Picture of Canada"><br/>
+              <p class="large-txt">
+                  When I was finally 4 years old, my parents decided to move to Canada in order to give me a better life.
+                  We moved here in montreal and have stayed here since. Every so often we go back to Romania to visit.
+                  The life conditions are a lot better here in Canada and I am very grateful for my parents moving here.
+                  It was a very hard time since I did not know the language and it was very hard to integrate in society.
+              </p>
+          </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block question1 %}
+    <label class="control-label col-sm-3" for="question 1">How many cousins do I have?</label>
+    <div class="col-sm-9">
+        <input type="radio" name="question 1" value="1">
+        <label for="1">1</label><br>
+        <input type="radio" name="question 1" value="2">
+        <label for="2">2</label><br>
+        <input type="radio" name="question 1" value="3">
+        <label for="3">3</label><br>
+        <input type="radio" name="question 1" value="4">
+        <label for="4">4</label><br>
+        <input type="radio" name="question 1" value="more">
+        <label for="more">5 or more</label><br>
+    </div>
+{% endblock %}
+
+{% block question2 %}
+    <label class="control-label col-sm-3" for="question 1">What city was I born in?</label>
+    <div class="col-sm-9">
+        <input type="radio" name="question 2" value="Brasov">
+        <label for="Brasov">Brasov</label><br>
+        <input type="radio" name="question 2" value="Bucuresti">
+        <label for="Bucuresti">Bucuresti</label><br>
+        <input type="radio" name="question 2" value="Ploesti">
+        <label for="Ploesti">Ploesti</label><br>
+        <input type="radio" name="question 2" value="Montreal">
+        <label for="Montreal">Montreal</label><br>
+        <input type="radio" name="question 2" value="Ottawa">
+        <label for="Ottawa">Ottawa</label><br>
+    </div>
+{% endblock %}
+

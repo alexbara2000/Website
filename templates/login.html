@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <title>Login</title>
+    <style>
+        body{
+            background-color: rgba(14, 120, 124, 0.2);
+        }
+    </style>
+{% endblock %}
+
+{% block title %}Login{% endblock %}
+
+{% block introduction %}
+    <br/>
+    <div style="text-align: center">
+        <P style="size: 20px">
+            <em>In order to access the website, you will need to login</em>
+        </P>
+    </div>
+    <br/><br/><br/>
+{% endblock %}
+
+{% block content %}
+<div style="text-align: center">
+    {% for message in get_flashed_messages() %}
+        <li>
+            <ul>
+                {{ message }}<br/>
+            </ul>
+        </li>
+        <br/>
+    {% endfor %}
+
+    <form action="/login" method="post" id="form1">
+        {{ form.csrf_token }}
+        {{ form.username.label }}: {{ form.username }}<br/>
+        {{ form.password.label }}: {{ form.password }}<br/>
+        {{ form.submit }}
+        <!--<input type="button" onclick="reset()" value="Reset">-->
+    </form>
+
+</div>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+{% endblock %}
+
+{% block content2 %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div style="text-align: left"><a href="/" class="btn btn-info" role="button">Back</a></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div style="text-align: center;"><a href="signup" class="btn btn-info" role="button" style="float:snap">Signup</a></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div style="text-align: right;"><a href="forgotPassword" class="btn btn-info" role="button" style="float: right">Forgot Password</a></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
